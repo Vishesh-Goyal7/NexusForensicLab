@@ -7,7 +7,7 @@ const denoiseRoute = require("./routes/denoiser");
 
 
 const app = express();
-const PORT = 1234;
+const PORT = process.env.PORT || 1234;
 
 // Middleware to parse JSON and files
 
