@@ -31,7 +31,7 @@ router.post("/denoise", upload.single("image"), async(req, res) => {
   
   console.log("starting script");
   
-  exec(`python3.10 "${pythonScript}" "${imagePath}"`, (err, stdout, stderr) => {
+  exec(`python3 "${pythonScript}" "${imagePath}"`, (err, stdout, stderr) => {
     fs.unlinkSync(imagePath); 
 
     if (err) {
