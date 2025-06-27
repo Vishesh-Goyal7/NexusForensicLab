@@ -29,6 +29,8 @@ router.post("/denoise", upload.single("image"), async(req, res) => {
   const originalPNGBuffer = await sharp(imageBuffer).png().toBuffer();
   const originalBase64 = originalPNGBuffer.toString("base64");
   
+  console.log("starting script");
+  
   exec(`python3.10 "${pythonScript}" "${imagePath}"`, (err, stdout, stderr) => {
     fs.unlinkSync(imagePath); 
 
