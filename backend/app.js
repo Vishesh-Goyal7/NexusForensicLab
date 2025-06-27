@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const multer = require("multer");
 const cors = require('cors');
@@ -7,7 +8,7 @@ const denoiseRoute = require("./routes/denoiser");
 
 
 const app = express();
-const PORT = process.env.PORT || 1234;
+const PORT = process.env.PORT;
 
 // Middleware to parse JSON and files
 
