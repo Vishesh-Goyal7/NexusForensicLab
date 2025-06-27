@@ -52,7 +52,7 @@ const App = () => {
       const formData = new FormData();
       formData.append('image', file);
       const response = await axios.post(
-        "http://localhost:1234/api/denoise",
+        "https://nexusforensiclab.onrender.com/api/denoise",
         formData,
         {
           headers: {
